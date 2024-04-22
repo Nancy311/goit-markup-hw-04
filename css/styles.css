@@ -200,24 +200,23 @@ cursor: pointer;
   color: var(--accent-color);
 }
 
-.mail::before{
+.mail::before {
   display: block;
   height: 12px;
-   width: 16px;
-content: "";
-background-image: url(../images/envelope.png);
-background-repeat: no-repeat;
+  width: 16px;
+  content: '';
+  background-image: url(../images/envelope.png);
+  background-repeat: no-repeat;
 }
 
-.tel::before{
-    display: block;
+.tel::before {
+  display: block;
   height: 16px;
   width: 10px;
-content: "";
-background-image: url(../images/smartphone.png);
-background-repeat: no-repeat;
+  content: '';
+  background-image: url(../images/smartphone.png);
+  background-repeat: no-repeat;
 }
-
 
 /*Перший блок*/
 
@@ -306,21 +305,18 @@ button:focus {
 .features-item {
   flex-basis: calc(100% / 4 - 30px);
   margin-left: 30px;
-
 }
 
 .features-item::before {
   display: block;
   height: 120px;
   content: '';
-   background-image: url(../images/antenna.png);
+  background-image: url(../images/antenna.png);
   /* background-size: contain; */
   background-repeat: no-repeat;
   background-position: center;
-background-color: rgba(245, 244, 250, 1);
-border-radius: 4px;
-
-
+  background-color: rgba(245, 244, 250, 1);
+  border-radius: 4px;
 }
 
 .features-item:nth-child(2):before {
@@ -439,64 +435,110 @@ border-radius: 4px;
   color: #212121;
 }
 
-.social{
+.social-list {
   display: flex;
   margin: 0px 32px 30px 32px;
   outline: 1px solid salmon;
   gap: 10px;
 }
 
-.link{
+/* .social-list-item {
+text-align: center;
+align-items: center;
+} */ */
+
+/* .link {
+  padding: 0;
+  border: none;
   display: inline-block;
-  height: 44px;
   width: 44px;
-  background-image: url(../images/instagram.png);
-  background-color: aqua;
-  background-size: 20px;
+  height: 44px;
+  background: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+  outline: 1px solid black;
+}
+
+.link:hover {
+  background-color: var(--accent-color);
+} */
+
+.icon-button{
+  display: inline-block;
+  /* width: 44px;
+  height: 44px; */
+   background: red;
+    border-radius: 50%;
+
+}
+ .icon {
+  width: 20px;
+  height: 20px;
+  fill: rgb(71, 109, 247);
+}
+
+.icon:hover {
+  fill: rgba(255, 255, 255, 1);
+}
+
+.social-list-item > a{
+  display: inline-block;
+}
+
+
+
+
+/* -------------Clients-------------------------- */
+
+.clients-list {
+  display: flex;
+  /* flex-wrap: wrap; */
+  margin: 0;
+  margin-right: -30px;
+}
+
+.clients-item {
+  margin: 0;
+  /* flex-basis: (calc(100% - 30px) / 6); */
+  width: 170px;
+  height: 92px;
+  /* background-color: (175, 177, 184, 1); */
+  border: 1px solid rgba(175, 177, 184, 1);
+  border-radius: 4px 0px 0px 0px;
+  background-image: url(../images/logo1.png);
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 50%;
-
+  margin-right: 30px;
 }
 
-.link:nth-child(2){
- background-image: url(../images/twitter.png);
+.clients-item:nth-child(2) {
+  background-image: url(../images/logo2.png);
 }
 
-.link:nth-child(3){
- background-image: url(../images/facebook.png);
+.clients-item:nth-child(3) {
+  background-image: url(../images/logo3.png);
 }
 
-.link:nth-child(4){
- background-image: url(../images/linkedin.png);
+.clients-item:nth-child(4) {
+  background-image: url(../images/logo4.png);
 }
 
+.clients-item:nth-child(5) {
+  background-image: url(../images/logo5.png);
+}
+.clients-item:nth-child(6) {
+  background-image: url(../images/logo6.png);
+}
 
+/* .clients-item::before{
+  content: "";
+  width: 170px;
+  height: 92px;
+    background-image: url(../images/logo1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+} */
 
-.link:hover{
-  background-color: #2f303a;}
-
-
-  /* -------------Clients-------------------------- */
-
-  .clients-list{
-    display: flex;
-    flex-wrap: nowrap;
-    outline: 1px solid green;
-  }
-
-  .clients-item{
-    /* flex-basis: (calc(100% / 6 - 150px)); */
-    width: 170px;
-    height: 92px;
-  outline: 1px solid green;
-rgba(175, 177, 184, 1);
-  border-radius: 4px 0px 0px 0px;
-background-image: url(../images/logo1.png);
-background-repeat: no-repeat;
-background-position: center;
-gap: 30px;
-  }
 /* ---------------Footer------------------ */
 
 .footer {
