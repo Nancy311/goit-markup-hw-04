@@ -196,19 +196,37 @@ cursor: pointer;
 
 .mail:hover,
 .tel:focus,
-.tel:hover .mail:focus {
+.tel:hover, .mail:focus {
   color: var(--accent-color);
 }
 
-.mail::before {
+/* .mail::before {
   display: block;
   height: 12px;
   width: 16px;
   content: '';
   background-image: url(../images/envelope.png);
   background-repeat: no-repeat;
+} */
+
+
+.icon-smartphone{
+  width: 10px;
+  height: 16px;
+  fill: rgba(117, 117, 117, 1);
 }
 
+.icon-envelope{
+  width: 16px;
+  height: 12px;
+  fill: rgba(117, 117, 117, 1);
+}
+
+.icon-smartphone:hover, .icon-envelope:hover{
+  fill: var(--accent-color);
+}
+
+/* Приклад ::before 
 .tel::before {
   display: block;
   height: 16px;
@@ -216,7 +234,7 @@ cursor: pointer;
   content: '';
   background-image: url(../images/smartphone.png);
   background-repeat: no-repeat;
-}
+} */
 
 /*Перший блок*/
 
@@ -442,48 +460,40 @@ button:focus {
   gap: 10px;
 }
 
-/* .social-list-item {
-text-align: center;
-align-items: center;
-} */ */
+.social-list-item {
+  display: inline-flex;
+   outline: 1px solid salmon;
+   
+ 
+}
 
-/* .link {
+.icon-link{
   padding: 0;
   border: none;
   display: inline-block;
   width: 44px;
   height: 44px;
   background: rgba(255, 255, 255, 1);
-    border-radius: 50%;
+  border-radius: 50%;
   outline: 1px solid black;
-}
+  align-content: center;
+  text-align: center;
 
-.link:hover {
+}
+.icon-link:hover {
   background-color: var(--accent-color);
-} */
+} 
 
-.icon-button{
-  display: inline-block;
-  /* width: 44px;
-  height: 44px; */
-   background: red;
-    border-radius: 50%;
 
-}
  .icon {
   width: 20px;
   height: 20px;
-  fill: rgb(71, 109, 247);
+  fill: rgba(175, 177, 184, 1);
 }
 
 .icon:hover {
   fill: rgba(255, 255, 255, 1);
 }
-
-.social-list-item > a{
-  display: inline-block;
-}
-
 
 
 
