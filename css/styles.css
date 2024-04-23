@@ -1,6 +1,7 @@
 :root {
   --primary-text-color: rgb(33, 33, 33);
   --accent-color: rgba(33, 150, 243, 1);
+  --icon-color: rgba(175, 177, 184, 1);
 }
 
 body {
@@ -196,33 +197,25 @@ cursor: pointer;
 
 .mail:hover,
 .tel:focus,
-.tel:hover, .mail:focus {
+.tel:hover,
+.mail:focus {
   color: var(--accent-color);
 }
 
-/* .mail::before {
-  display: block;
-  height: 12px;
-  width: 16px;
-  content: '';
-  background-image: url(../images/envelope.png);
-  background-repeat: no-repeat;
-} */
-
-
-.icon-smartphone{
+.icon-smartphone {
   width: 10px;
   height: 16px;
   fill: rgba(117, 117, 117, 1);
 }
 
-.icon-envelope{
+.icon-envelope {
   width: 16px;
   height: 12px;
   fill: rgba(117, 117, 117, 1);
 }
 
-.icon-smartphone:hover, .icon-envelope:hover{
+.icon-smartphone:hover,
+.icon-envelope:hover {
   fill: var(--accent-color);
 }
 
@@ -265,10 +258,6 @@ cursor: pointer;
   margin-block-start: 0px;
   margin-block-end: 0px;
   margin-bottom: 30px;
-  /* height: 120px; */
-  /* padding-left: 237px;
-    padding-right: 237px; */
-  /* align-content: center; */
   font-size: 44px;
   font-weight: 900;
   text-align: center;
@@ -325,13 +314,27 @@ button:focus {
   margin-left: 30px;
 }
 
-.features-item::before {
+.features-image {
+  display: block;
+  height: 120px;
+  background-color: rgba(245, 244, 250, 1);
+  border-radius: 4px;
+}
+
+/* .image{
+  display: block;
+  width: 270px;
+  height: 120px;
+} */
+/* 
+
+/* .features-item::before {
   display: block;
   height: 120px;
   content: '';
-  background-image: url(../images/antenna.png);
-  /* background-size: contain; */
-  background-repeat: no-repeat;
+  background-image: url(../images/antenna.png); */
+/* background-size: contain; */
+/* background-repeat: no-repeat;
   background-position: center;
   background-color: rgba(245, 244, 250, 1);
   border-radius: 4px;
@@ -339,7 +342,7 @@ button:focus {
 
 .features-item:nth-child(2):before {
   /* можна через доп класс задавать свойства */
-  background-image: url(../images/clock.png);
+/* background-image: url(../images/clock.png);
 }
 
 .features-item:nth-child(3):before {
@@ -348,7 +351,7 @@ button:focus {
 
 .features-item:nth-child(4):before {
   background-image: url(../images/astronaut.png);
-}
+} */
 
 .features-text {
   font-family: Roboto;
@@ -462,12 +465,10 @@ button:focus {
 
 .social-list-item {
   display: inline-flex;
-   outline: 1px solid salmon;
-   
- 
+  outline: 1px solid salmon;
 }
 
-.icon-link{
+.icon-link {
   padding: 0;
   border: none;
   display: inline-block;
@@ -478,14 +479,12 @@ button:focus {
   outline: 1px solid black;
   align-content: center;
   text-align: center;
-
 }
 .icon-link:hover {
   background-color: var(--accent-color);
-} 
+}
 
-
- .icon {
+.icon {
   width: 20px;
   height: 20px;
   fill: rgba(175, 177, 184, 1);
@@ -495,59 +494,43 @@ button:focus {
   fill: rgba(255, 255, 255, 1);
 }
 
-
-
 /* -------------Clients-------------------------- */
 
 .clients-list {
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   margin: 0;
   margin-right: -30px;
+  margin-top: -30px;
 }
 
 .clients-item {
   margin: 0;
-  /* flex-basis: (calc(100% - 30px) / 6); */
-  width: 170px;
-  height: 92px;
-  /* background-color: (175, 177, 184, 1); */
-  border: 1px solid rgba(175, 177, 184, 1);
-  border-radius: 4px 0px 0px 0px;
-  background-image: url(../images/logo1.png);
-  background-repeat: no-repeat;
-  background-position: center;
+  flex-basis: calc(100% / 6 - 30px);
   margin-right: 30px;
+  margin-top: 30px;
+  height: 92px;
 }
 
-.clients-item:nth-child(2) {
-  background-image: url(../images/logo2.png);
+.clients-link {
+  display: inline-block;
+  width: 170px;
+  align-content: center;
+  text-align: center;
 }
 
-.clients-item:nth-child(3) {
-  background-image: url(../images/logo3.png);
-}
-
-.clients-item:nth-child(4) {
-  background-image: url(../images/logo4.png);
-}
-
-.clients-item:nth-child(5) {
-  background-image: url(../images/logo5.png);
-}
-.clients-item:nth-child(6) {
-  background-image: url(../images/logo6.png);
-}
-
-/* .clients-item::before{
-  content: "";
+.icon-clients {
   width: 170px;
   height: 92px;
-    background-image: url(../images/logo1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-} */
+  fill: var(--icon-color);
+  border-radius: 4px;
+  border: 1px solid var(--icon-color);
+}
+
+.icon-clients:hover {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
 
 /* ---------------Footer------------------ */
 
@@ -557,6 +540,13 @@ button:focus {
   background: #2f303a;
 }
 
+.footer-section{
+  display: flex;
+}
+
+.logo-adress{
+  display: block;
+}
 .footer-logo {
   margin-bottom: 28px;
 }
@@ -578,6 +568,7 @@ button:focus {
   color: #ffffff;
   text-decoration: none;
 }
+
 
 .adress-list {
   margin-top: 28px;
@@ -604,6 +595,59 @@ button:focus {
   padding-bottom: 12px;
   text-decoration: none;
   gap: 12px;
+}
+
+/*--------footer-list -------------------------------*/
+
+.footer-social-links {
+  outline: 1px solid green;
+  margin-top: 10px;
+  margin-left: 70px;
+}
+
+.footer-list {
+  margin: 0;
+}
+.footer-subtitle {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+}
+
+.footer-list-item {
+  display: inline-flex;
+  outline: 1px solid salmon;
+}
+
+.footer-icon-link {
+  padding: 0;
+  border: none;
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  outline: 1px solid black;
+  align-content: center;
+  text-align: center;
+}
+.footer-icon-link:hover {
+  background-color: var(--accent-color);
+;
+}
+
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  fill:rgba(255, 255, 255, 1);
+;
+}
+
+.footer-icon:hover {
+  fill: rgba(255, 255, 255, 1);
 }
 
 /*------------------------------------------------------------ Portfolio -------------------------------*/
