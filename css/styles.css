@@ -178,44 +178,54 @@ cursor: pointer;
 .contacts-list {
   display: flex;
   margin-left: auto; /*прижимает вправо до концф контейнера*/
+  align-items: center;
+  /* align-content: baseline; */
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  text-align: left;
+  gap: 30px;
 }
 
-.contacts-list-item:hover,
-.contacts-list-item:focus {
-  color: var(--accnt-color);
+.contacts-list-item{
+    display: inline-block;
+    text-decoration: none;
+    color: rgba(117, 117, 117, 1);
 }
 
-.contacts-list-item + .contacts-list-item {
-  margin-left: 40px;
-}
+.mail-tel {
 
-.mail,
-.tel {
+  /* align-content: baseline; */
   color: rgba(117, 117, 117, 1);
   text-decoration: none;
 }
 
-.mail:hover,
-.tel:focus,
-.tel:hover,
-.mail:focus {
-  color: var(--accent-color);
-}
+
 
 .icon-smartphone {
+  fill: currentColor;
   width: 10px;
   height: 16px;
-  fill: rgba(117, 117, 117, 1);
+  margin-right: 10px;
 }
 
 .icon-envelope {
+  fill: currentColor;
   width: 16px;
   height: 12px;
-  fill: rgba(117, 117, 117, 1);
+  margin-right: 10px;
+}
+
+.mail-tel:hover,
+.mail-tel:focus {
+  color: var(--accent-color);
 }
 
 .icon-smartphone:hover,
-.icon-envelope:hover {
+.icon-smartphone:focus,
+.icon-envelope:hover,
+.icon-envelope:focus {
   fill: var(--accent-color);
 }
 
@@ -456,42 +466,53 @@ button:focus {
   color: #212121;
 }
 
+/* ---------------------Social icons____ */
 .social-list {
   display: flex;
-  margin: 0px 32px 30px 32px;
+  justify-content: center;
+  /* margin: 0px 32px 30px 32px; */
+  margin-bottom: 30px;
   outline: 1px solid salmon;
-  gap: 10px;
 }
 
 .social-list-item {
-  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  margin-left: 10px;
   outline: 1px solid salmon;
+}
+
+.social-list-item:nth-child(1) {
+  margin-left: 0;
 }
 
 .icon-link {
   padding: 0;
   border: none;
-  display: inline-block;
-  width: 44px;
-  height: 44px;
-  background: rgba(255, 255, 255, 1);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(
+    175,
+    177,
+    184,
+    1
+  ); /*задаем цвет чтоб задать потом киррент колир тогда ховер будет легко поставить */
   border-radius: 50%;
   outline: 1px solid black;
-  align-content: center;
-  text-align: center;
-}
-.icon-link:hover {
-  background-color: var(--accent-color);
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
-  fill: rgba(175, 177, 184, 1);
+  fill: currentColor;
 }
 
-.icon:hover {
-  fill: rgba(255, 255, 255, 1);
+.icon-link:hover,
+.icon-link:focus {
+  background-color: var(--accent-color);
+  color: rgba(255, 255, 255, 1);
 }
 
 /* -------------Clients-------------------------- */
@@ -502,6 +523,7 @@ button:focus {
   margin: 0;
   margin-right: -30px;
   margin-top: -30px;
+  
 }
 
 .clients-item {
@@ -510,13 +532,17 @@ button:focus {
   margin-right: 30px;
   margin-top: 30px;
   height: 92px;
+  display: flex;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
 }
 
 .clients-link {
-  display: inline-block;
-  width: 170px;
+  display: flex;
   align-content: center;
-  text-align: center;
+  justify-content: center;
+  width: 170px;
 }
 
 .icon-clients {
@@ -540,11 +566,11 @@ button:focus {
   background: #2f303a;
 }
 
-.footer-section{
+.footer-section {
   display: flex;
 }
 
-.logo-adress{
+.logo-adress {
   display: block;
 }
 .footer-logo {
@@ -568,7 +594,6 @@ button:focus {
   color: #ffffff;
   text-decoration: none;
 }
-
 
 .adress-list {
   margin-top: 28px;
@@ -636,14 +661,12 @@ button:focus {
 }
 .footer-icon-link:hover {
   background-color: var(--accent-color);
-;
 }
 
 .footer-icon {
   width: 20px;
   height: 20px;
-  fill:rgba(255, 255, 255, 1);
-;
+  fill: rgba(255, 255, 255, 1);
 }
 
 .footer-icon:hover {
